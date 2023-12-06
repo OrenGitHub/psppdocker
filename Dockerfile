@@ -20,3 +20,4 @@ RUN wget https://ftp.gnu.org/gnu/pspp/pspp-1.6.2.tar.gz
 RUN tar -xf pspp-1.6.2.tar.gz
 RUN cd pspp-1.6.2 && ./configure --without-gui CFLAGS="-g -O0"
 RUN cd pspp-1.6.2 && make && make install
+RUN objdump -D -S /usr/local/lib/pspp/libpspp-1.6.2.so > pspp.asm

@@ -7,3 +7,8 @@ docker build --tag host --file Dockerfile .
 docker run -d -t --name pspp host
 docker exec -it pspp bash 
 ```
+
+## copy files from docker
+```
+docker cp pspp:/pspp.asm .
+```
